@@ -1,1 +1,1 @@
-# 2026.09.14_CXQ966
+# SzkriptLabor2026_CXQ966
