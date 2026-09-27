@@ -1,10 +1,22 @@
 #nyelvi szerkezetek
+# import random
+# from random import randint
+# from random import *
+# import random as veletlen
+from random import randint as veletlen_szam
 
 def ker_ter (a,b):
     k = 2 * a + 2 * b
     t = a * b
     print(f'kerulet: {k}')
     return k,t
+
+def lotto ():
+    from random import randint
+    i = 0
+    while i < 5:
+        print(randint(1, 90))
+        i += 1
 
 felhasznalo_kora = int(input("Hány éves vagy: "))
 if felhasznalo_kora >=18:
@@ -33,7 +45,20 @@ print('vége a ciklusnak')
 
 alap = 5
 magassag = 3
-ker_ter = (alap, magassag)
-kerulet = ker_ter[0]
-terulet = ker_ter[1]
-print(f'kerulet =')
+
+kerulet = ker_ter(alap, magassag)[0]
+terulet = ker_ter(alap, magassag)[1]
+print(f'Kerület = {kerulet}\nTerület = {terulet}')
+
+eredmeny = ker_ter(alap, magassag)
+print(f'Kerület = {eredmeny[0]}\nTerület = {eredmeny[1]}')
+
+print(f'Kerület = {ker_ter(alap, magassag)[0]}\nTerület = {ker_ter(alap, magassag)[1]}\n')
+
+i = 0
+while i < 5:
+    print(veletlen_szam(1, 90))
+    i += 1
+print()
+
+lotto()
